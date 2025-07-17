@@ -28,21 +28,7 @@
   display: flex;
   gap: 20px;
   justify-content: center;
+  align-items: center;
 }
-/*
 
-
-1. body-top 클래스에
-마진 패딩 0만들기
-
-
-2. header 전체 박스
-로고가 들어갈 위치
-로그인 | 회원가입
-한줄에 존재하도록 display 설정
-패딩 15 30
-배경색상 #ddd
-좌 우로 나누기
-jstify-content:space-between
-alian-items:center
-*/
+.
