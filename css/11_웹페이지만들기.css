@@ -31,4 +31,59 @@
   align-items: center;
 }
 
-.
+.nav ul a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+}
+.banner-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+.banner {
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/banner1.png");
+  background-size: auto 145%;
+  background-repeat: no-repeat;
+  /*contain -> 이미지 사이즈가 기기 너비만큼 복제*/
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  position: relative;
+}
+
+.banner-text {
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  color: #333;
+  text-align: center;
+}
+.banner-text h1 {
+  margin-bottom: 20px;
+  /*
+  box-shadow  나 text-shadow 나 동일한특성을 지님
+  box-shadow  담겨진 테두리 음영을 줄 때 사용
+  text-shadow 글자 테두리 음영을 줄 때 사용
+
+                오른쪽으로 이동   아래쪽으로 얼마나 이동할 것인가  그림자 흐린정도     80% 불투명한 흰색
+  text-shadow: 2px             2px                            4px              rgba(255, 255, 255, 0.8);
+  
+
+  색상
+  rgba(255 = 빨간색, 255 = 초록색 , 255 = 파란색 ,불투명한 정도는 0.1로 갈수록 투명해져서 그림자가 안보임
+                                                               0.9로 갈수록 불투명(=선명)해져서 그림자가 뚜렷 )
+                왼쪽으로 이동    위로 이동             선명하게                  0 = 검정계열           
+  text-shadow: -20px             -20px                 0px           rgba(0, 0, 0, 0.9);
+                                                                     rgba(255, 255, 255, 0.9)
+                                                                         255 255 255 는 흰색을 뜻함
+  */
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.9);
+}
