@@ -1,3 +1,5 @@
+/***** 공통 CSS *****/
+
 body {
   margin: 20px 0 0 0;
   background-color: #f9f9f9;
@@ -46,6 +48,14 @@ p {
   background-color: #ff5252;
 }
 
+.nav .move-link {
+  background-color: #28a745;
+}
+.nav .move-link:hover {
+  background-color: #218838;
+}
+
+/***** 메인페이지 CSS *****/
 .alert {
   background-color: #fff3cd;
   padding: 20px;
@@ -103,6 +113,53 @@ p {
   text-align: left;
   color: #666;
   margin: 0;
+}
+
+/***** 회원가입 CSS *****/
+.sign-container {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.sign-container label {
+  display: block;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.sign-container input,
+.sign-container select,
+.sign-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+.sign-container input:focus,
+.sign-container select:focus,
+.sign-container textarea:focus {
+  outline-color: #ffb6b6;
+}
+/*
+input select textarea 태그에 
+포커스가 맞춰지면 
+실선 색상을 #ff6b6b 로 설정
+*/
+
+.sign-container textarea {
+  height: 80px;
+  resize: none;
+}
+
+.sign-container button {
+  padding: 12px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* 태블릿 반응형 768 px*/
