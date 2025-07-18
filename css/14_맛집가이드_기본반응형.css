@@ -191,8 +191,18 @@ input select textarea 태그에
     grid-template-columns: 1fr;
     gap: 15px;
   }
-}
 
+  .sign-container {
+    max-width: __%;
+    margin: ___px 0;
+  }
+
+  .btn-group button {
+    display: ___;
+    width: __%;
+    margin: ___px 0;
+  }
+}
 /* 모바일 반응형 460 px*/
 @media (max-width: 460px) {
   body {

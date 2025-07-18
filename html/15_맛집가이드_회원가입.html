@@ -94,7 +94,40 @@
             placeholder="맛집에 대한 관심사나 소개를 간단히 해주세요."
           >
           </textarea>
-          <div class="checkbox-group">체크박스자리</div>
+          <div class="checkbox-group">
+            <p><strong>이용약관 동의</strong></p>
+
+            <label
+              style="display: flex; align-items: center; margin-bottom: 8px"
+            >
+              <input
+                type="checkbox"
+                name="agree1"
+                required
+                style="margin-right: 8px"
+              />
+              [필수] 서비스 이용약관에 동의합니다.
+            </label>
+
+            <label
+              style="display: flex; align-items: center; margin-bottom: 8px"
+            >
+              <input
+                type="checkbox"
+                name="agree2"
+                required
+                style="margin-right: 8px"
+              />
+              [필수] 개인정보 처리방침에 동의합니다.
+            </label>
+
+            <label
+              style="display: flex; align-items: center; margin-bottom: 8px"
+            >
+              <input type="checkbox" name="agree3" style="margin-right: 8px" />
+              [선택] 마케팅 정보 수신에 동의합니다.
+            </label>
+          </div>
         </label>
         <div class="btn-group">
           <button class="">회원가입</button>
