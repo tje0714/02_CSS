@@ -128,18 +128,24 @@ p {
   font-weight: bold;
 }
 
-.sign-container input,
-.sign-container select,
-.sign-container textarea {
+.sign-container label span {
+  color: #ff4444;
+  font-size: 16px;
+  margin-left: 2px;
+  font-weight: bold;
+}
+.sign-container > label > input,
+.sign-container > label > select,
+.sign-container > label > textarea {
   width: 100%;
   padding: 10px;
   border: 2px solid #ddd;
   border-radius: 5px;
   margin-top: 5px;
 }
-.sign-container input:focus,
-.sign-container select:focus,
-.sign-container textarea:focus {
+.sign-container > label > input:focus,
+.sign-container > label > select:focus,
+.sign-container > label > textarea:focus {
   outline-color: #ffb6b6;
 }
 /*
@@ -153,6 +159,20 @@ input select textarea 태그에
   resize: none;
 }
 
+.checkbox-group {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.checkbox-group input {
+  margin-right: 8px;
+}
 .sign-container button {
   padding: 12px 30px;
   margin: 0 10px;
@@ -161,7 +181,30 @@ input select textarea 태그에
   font-weight: bold;
   cursor: pointer;
 }
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
+}
 
+/* 회원가입 버튼 */
+.sign-container button:first-child {
+  background-color: #ff6b6b;
+  color: white;
+}
+
+.sign-container button:first-child:hover {
+  background-color: #ff5252;
+}
+
+/* 초기화 버튼 */
+.sign-container button:last-child {
+  background-color: #6c757d;
+  color: white;
+}
+
+.sign-container button:last-child:hover {
+  background-color: #5a6268;
+}
 /* 태블릿 반응형 768 px*/
 @media (max-width: 768px) {
   .container {
@@ -193,14 +236,14 @@ input select textarea 태그에
   }
 
   .sign-container {
-    max-width: __%;
-    margin: ___px 0;
+    max-width: 100%;
+    margin: 10px 0;
   }
 
   .btn-group button {
-    display: ___;
-    width: __%;
-    margin: ___px 0;
+    display: block;
+    width: 100%;
+    margin: 10px 0;
   }
 }
 /* 모바일 반응형 460 px*/
@@ -231,6 +274,15 @@ input select textarea 태그에
   .alert {
     padding: 15px;
     font-size: 0.9rem;
+  }
+  .sign-container input,
+  .sign-container select,
+  .sign-container textarea {
+    font-size: 16px; /* iOS 줌 방지 */
+  }
+
+  .sign-container button {
+    padding: 15px;
   }
 }
 

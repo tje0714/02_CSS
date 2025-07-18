@@ -26,7 +26,7 @@
         -->
       <form class="sign-container" action="#">
         <label>
-          이름 :
+          이름<span>*</span> :
           <!-- 
            input type="text" 를 
            작성하지 않아도 
@@ -43,7 +43,7 @@
           />
         </label>
         <label>
-          이메일 :
+          이메일 <span>*</span>:
           <input
             type="email"
             id="useremail"
@@ -53,7 +53,7 @@
           />
         </label>
         <label>
-          비밀번호 :
+          비밀번호 <span>*</span>:
           <input
             type="password"
             id="userPw1"
@@ -63,7 +63,7 @@
           />
         </label>
         <label>
-          비밀번호 확인 :
+          비밀번호 확인 <span>*</span>:
           <input
             type="password"
             id="userPw2"
@@ -92,46 +92,29 @@
             id="info"
             name="info"
             placeholder="맛집에 대한 관심사나 소개를 간단히 해주세요."
-          >
-          </textarea>
+          ></textarea>
           <div class="checkbox-group">
             <p><strong>이용약관 동의</strong></p>
 
-            <label
-              style="display: flex; align-items: center; margin-bottom: 8px"
-            >
-              <input
-                type="checkbox"
-                name="agree1"
-                required
-                style="margin-right: 8px"
-              />
+            <label>
+              <input type="checkbox" name="agree1" required />
               [필수] 서비스 이용약관에 동의합니다.
             </label>
 
-            <label
-              style="display: flex; align-items: center; margin-bottom: 8px"
-            >
-              <input
-                type="checkbox"
-                name="agree2"
-                required
-                style="margin-right: 8px"
-              />
+            <label>
+              <input type="checkbox" name="agree2" required />
               [필수] 개인정보 처리방침에 동의합니다.
             </label>
 
-            <label
-              style="display: flex; align-items: center; margin-bottom: 8px"
-            >
-              <input type="checkbox" name="agree3" style="margin-right: 8px" />
+            <label>
+              <input type="checkbox" name="agree3" />
               [선택] 마케팅 정보 수신에 동의합니다.
             </label>
           </div>
         </label>
         <div class="btn-group">
-          <button class="">회원가입</button>
-          <button class="">초기화</button>
+          <button type="submit">회원가입</button>
+          <button type="reset">초기화</button>
         </div>
       </form>
     </div>
