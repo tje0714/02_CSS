@@ -410,11 +410,15 @@ input select textarea 태그에
   .hamburger {
     display: block;
   }
+
   .nav {
     flex-direction: column;
     align-items: center;
+    display: none;
   }
-
+  .nav.show {
+    display: flex;
+  }
   .nav a {
     width: 80%;
     text-align: center;
