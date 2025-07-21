@@ -36,7 +36,20 @@ a {
   color: #333;
   font-size: 18px;
 }
-
+.hamburger {
+  display: none;
+  /* 
+     평소에는 숨기기 ~
+    display: block; -> 460 때 설정
+    
+    */
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 .nav {
   display: flex;
   justify-content: center;
@@ -296,6 +309,7 @@ input select textarea 태그에
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .재료아이템 {
   background-color: #4caf50;
@@ -322,7 +336,18 @@ input select textarea 태그에
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* 태블릿 반응형 768 px*/
+.order-item strong {
+  display: block;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.order-item p {
+  color: #ff6b6b;
+  font-size: 1.5rem; /* 24px */
+}
+
+/* 태블릿 반응형 768 px */
 @media (max-width: 768px) {
   .container {
     /* 가로스크롤 안생기게
@@ -330,13 +355,12 @@ input select textarea 태그에
     */
     width: 100%;
     padding: 0px;
-    margin: px;
+    margin: 0;
   }
 
   h1 {
     font-size: 32px;
   }
-
   .nav {
     flex-wrap: wrap;
     gap: 10px;
@@ -362,6 +386,11 @@ input select textarea 태그에
     width: 100%;
     margin: 10px 0;
   }
+
+  .order-list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
 }
 /* 모바일 반응형 460 px*/
 @media (max-width: 460px) {
@@ -375,9 +404,12 @@ input select textarea 태그에
   }
 
   h1 {
-    font-size: 29px;
+    font-size: 20px;
   }
-
+  /*  네비게이션을 모바일에서 확인했을 때 토글형태로 확인할 수 있다.  */
+  .hamburger {
+    display: block;
+  }
   .nav {
     flex-direction: column;
     align-items: center;
@@ -400,6 +432,14 @@ input select textarea 태그에
 
   .sign-container button {
     padding: 15px;
+  }
+
+  .재료리스트 {
+    gap: 8px;
+  }
+  .재료아이템 {
+    padding: 6px 12px;
+    font-size: 10px;
   }
 }
 
