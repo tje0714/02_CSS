@@ -97,12 +97,15 @@ accent-color : #ff6b6b 로 변경
 .choice-field > label > input {
   /*
     accent-color : 체크된 체크박스 내부 색상을 변경
-    체크된 체크표시의 색상을 변경
+    체크된 체크표시의 색상을 변경할 경우 
+    fontasome 이나 외부에서 작성한 svg 폰트, icon을 사용해서 변경할 수 있음
     */
   accent-color: #ff6b6b;
+  color: white;
 }
 
-.choice-field > label > input:checked {
+.choice-field > label > input:checked + .choice-field > label > input::after {
+  content: "ㅎ";
   /*
 accent-color : 체크된 체크박스 내부 색상을 변경
 체크된 체크표시의 색상을 변경
