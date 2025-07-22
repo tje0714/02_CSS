@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>맛집 가이드 - 설문조사</title>
+    <link rel="stylesheet" href="../css/14_맛집가이드_기본반응형.css" />
+    <link rel="stylesheet" href="../css/18_맛집가이드_설문조사.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>맛집 가이드 - 설문조사</h1>
+
+      <button class="hamburger">&#9776;</button>
+      <div class="nav">
+        <a href="14_맛집가이드_기본반응형.html" class="move-link">홈</a>
+        <a href="#양식">양식</a>
+        <a href="#한식">한식</a>
+        <a href="#일식">일식</a>
+        <a href="#중식">중식</a>
+        <a href="#디저트">디저트</a>
+        <a href="15_맛집가이드_회원가입.html" class="move-link">회원가입</a>
+      </div>
+      <!-- 
+      action form 내부에 작성된 값을 결과로 전달
+      전달할 html이 존재하지 않는다면 #으로 표기
+
+      -->
+      <form action="#">
+        <!-- 기본정보 -->
+        <fieldset>
+          <legend>기본 정보</legend>
+
+          <label>
+            이름 :
+            <!--    
+            class = css 스타일을 꾸며줄 때 사용하는 명칭
+            id    = 자바스크립트 기능 연결할 때 사용하는 명칭 
+            name  = 소비자가 작성한 값을 action으로 전달할 html 내부에
+                    전달할 때 사용하는 명칭
+            required = 작성하지 않으면 폼 제출 못하게 막아주는 필수 항목
+            readonly = 작성못하게 막고, 오직 읽기모드 상태
+                        -> SNS 연결해서 회원가입하기
+                            -> 가져온 이메일을 수정하지 못하도록 방지
+            -->
+            <input id="username" name="username" required />
+          </label>
+          <label>
+            이메일 :
+            <input type="email" id="useremail" name="useremail" required />
+          </label>
+          <label>
+            나이 :
+            <input
+              type="range"
+              id="userage"
+              name="userage"
+              min="10"
+              max="100"
+              value="25"
+            />
+          </label>
+          <label>
+            전화번호 :
+            <!--
+            input의 기본 타입은 text 이다.
+            type 으로 number 나 range 를 작성해줄 경우에는
+                min 최소 숫자 값 max 최대 숫자 값 을 지정할 수 있고,
+                value 를 설정해서 기본 숫자값을 설정할 수 있다.
+            placeholder = input 내부에 어떠한 값을 작성해주어야 하는지
+                          알려주는 알림값
+            
+            input 의 경우는 주관식처럼 소비자가 작성한 value 값을 가져오기 때문에
+                    기본적으로 value를 작성하지 않지만
+               
+                    checkbox 나 radio 처럼 객관식으로 개발자가 지정한 범위 내에서
+                    소비자가 값을 설정할 경우에는 value 값을 개발자가 지정해주어야 함
+            -->
+            <input
+              id="userphone"
+              name="userphone"
+              placeholder="010- 형식으로 전화번호 입력"
+            />
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>음식 선호도</legend>
+          <p>좋아하는 음식 종류 (복수 선택 가능 : )</p>
+          <label>
+            <!--      value = 소비자가 어떤 값을 선택했는지 개발자에게 전달 -->
+            <input type="checkbox" id="korean" name="food" value="korean" />
+            한식
+          </label>
+          <label>
+            <input type="checkbox" id="japanese" name="food" value="japanese" />
+            일식
+          </label>
+          <label>
+            <input type="checkbox" id="western" name="food" value="western" />
+            양식
+          </label>
+          <label>
+            <input type="checkbox" id="chinese" name="food" value="chinese" />
+            중식
+          </label>
+
+          <p>맛집 방문 빈도 (중복 선택 불가 : )</p>
+          <label>
+            <input type="radio" id="daily" name="frequency" value="daily" />
+            매일
+          </label>
+          <label>
+            <input type="radio" id="weekly" name="frequency" value="weekly" />
+            주 1 ~ 2 회
+          </label>
+        </fieldset>
+        <!-- 맛집 이미지  
+         html 코드를 작성할 때 
+         어디서부터 어디까지 어떤 코드를 작성했는지 표기
+         -->
+        <fieldset>
+          <legend>맛집 사진 1탄</legend>
+          <!-- 
+          현재 컴퓨터에서 이미지 파일 가져오기 
+          alt 시각적으로 보이지 않는 분들을 위해서 이미지가 무엇인지
+                알려주는 설명 , 이미지가 보이지 않을 때
+                어떤 이미지의 위치인지 알려줌
+          -->
+          <img
+            style="width: 200px"
+            src="../images/pizza/감자피자.png"
+            alt="감자피자"
+          />
+          <p>위 음식이 맛있어 보이나요?</p>
+          <label>
+            <input type="radio" id="yes" name="looks1" value="yes" />
+            네, 맛있어 보여요.
+          </label>
+          <label>
+            <input type="radio" id="no" name="looks1" value="no" />
+            아니요, 별로예요. ㅎㅎ
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>맛집 사진 2탄</legend>
+          <img
+            src="https://www.chosun.com/resizer/v2/IFHDK4JPAZF6XMM5NBNRUDTSBE.jpg?auth=b971ded640b7ce051faf26521a10082b2a96ddac5f0061748ae3b7c673f08235&width=500&height=480&smart=true"
+            alt="비빔밥"
+          />
+          <p>위 음식이 맛있어 보이나요?</p>
+          <label>
+            <input type="radio" id="yes" name="looks2" value="yes" />
+            네, 맛있어 보여요.
+          </label>
+          <label>
+            <input type="radio" id="no" name="looks2" value="no" />
+            아니요, 별로예요. ㅎㅎ
+          </label>
+        </fieldset>
+        <!-- 유튜브 영상       이모지 = window모양 키 + .      -->
+        <fieldset>
+          <legend>맛집 소개 영상</legend>
+          <p>유명한 맛집 리뷰 영상을 시청해보세요 :</p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/G8TJI5jd9tA?si=PL0CjmA2RxKXRlj3"
+            title="음식"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <label>
+            <input type="radio" id="good" name="ytv1" value="good" />
+            도움됨👍
+          </label>
+          <label>
+            <input type="radio" id="bad" name="ytv1" value="bad" />
+            도움안됨👎
+          </label>
+        </fieldset>
+        <fieldset>
+          <legend>맛집 위치</legend>
+          <p>서울 맛집 밀집 지역 - 종각역 주변 :</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25301.04340942419!2d126.97406466358592!3d37.563770159018475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2f1c7af3d5f%3A0x50d5593269776722!2z66qF64-Z6rGw66as!5e0!3m2!1sko!2skr!4v1753150171009!5m2!1sko!2skr"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>이 지역에 가본 적이 있나요?(방문한 사람만 체크)</p>
+          <!--
+          radio는 반드시 둘 중 하나를 선택
+          checkbox 는 모두 선택을 안해도 되고, 부분 선택 가능, 중복 선택 사능
+          -->
+          <label>
+            <input
+              type="checkbox"
+              id="visited"
+              name="visited"
+              value="visited"
+            />
+            네, 가본 적 있어요.
+          </label>
+        </fieldset>
+        <!-- 제출 버튼 -->
+        <button type="submit">제출하기</button>
+        <button type="reset">다시 작성하기</button>
+        <button type="button">설명 가이드</button>
+      </form>
+    </div>
+  </body>
+</html>
